@@ -1,10 +1,6 @@
 <?php
-get_header(); 
-?>  
-
-
-<h1>hello world</h1>
-
-<?php
-get_footer();
-?>
+// Enregistrement du menu
+function register_my_menu() {
+    register_nav_menu('menu-tete', 'Menu de Tête');
+}
+add_action('after_setup_theme', 'register_my_menu');
